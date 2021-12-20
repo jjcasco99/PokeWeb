@@ -10,6 +10,7 @@ const Listapokemon = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     setPokeName(e.target.pokemon.value)
+    e.target.pokemon.value="";
   }
 
   
@@ -37,7 +38,7 @@ const Listapokemon = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="pokemon">Introduce un pokemon:</label><br />
+        <label htmlFor="pokemon">Introduce un pokemon y te pintare cada búsqueda:</label><br />
         <input type="text" id="pokemon" name="pokemon" /><br />
         <input type="submit" />
       </form>

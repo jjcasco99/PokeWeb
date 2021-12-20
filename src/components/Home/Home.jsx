@@ -11,7 +11,7 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setPokeName(e.target.pokemon.value)
-    console.log(pokeName)
+    e.target.pokemon.value="";
   }
 
   useEffect(() => {
