@@ -34,11 +34,12 @@ const Home = () => {
 
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="pokemon">Introduce un pokemon:</label><br />
+    <div className='general'>
+      <h1>¡BIENVENIDO A LA WEB DE API-POKEMON, PRUEBA LAS DIFERENTES FUNCIONES!</h1>
+      <form onSubmit={handleSubmit} className='form'>
+        <label htmlFor="pokemon">INTRODUCE UN POKEMON:</label><br />
         <input type="text" id="pokemon" name="pokemon" /><br />
-        <input type="submit" />
+        <input type="submit" className="button"/>
       </form>
       <> {pokeName ? <Card pokemon={pokemons} /> : ""}</>
     </div>

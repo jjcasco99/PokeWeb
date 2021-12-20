@@ -1,0 +1,51 @@
+@mixin form {
+    .form {
+        width: 400px;
+        background: #232e3a;
+        padding: 30px;
+        margin: auto;
+        border-radius: 4px;
+        font-family:'Times New Roman', Times, serif;
+        font-size: 18px;
+        text-shadow: 0.1em 0.05em blue;
+        color: white;
+        box-shadow: 7px 13px 37px #000;
+      }
+      
+      #pokemon {
+        width: 70%;
+        background: #24303c;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        margin-top: 16px;
+        border: 1px solid #1f53c5;
+        font-family: 'calibri';
+        font-size: 18px;
+        color: white;
+      }
+}
+
+@mixin divPokemon {
+  .pokemon {
+    height: 260px;
+    border: 1px solid black;
+    width: 400px;
+    background: #232e3a;
+    padding: 30px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 4px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-shadow: 0.1em 0.05em blue;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+}
+
+@mixin divGeneral {
+  .general {
+    margin-bottom: 75px;
+  }
+}

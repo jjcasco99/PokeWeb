@@ -36,11 +36,11 @@ const Listapokemon = () => {
 
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="pokemon">Introduce un pokemon y te pintare cada búsqueda:</label><br />
+    <div className='general'>
+      <form onSubmit={handleSubmit} className='form'>
+        <label htmlFor="pokemon">INTRODUCE UN POKEMON Y TE PINTARE CADA BÚSQUEDA:</label><br />
         <input type="text" id="pokemon" name="pokemon" /><br />
-        <input type="submit" />
+        <input type="submit" className="button" />
       </form>
       <> {paintPokemons()}</>
     </div>

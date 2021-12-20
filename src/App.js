@@ -4,6 +4,7 @@ import Main from './components/Main/';
 import './App.css';
 
 import {BrowserRouter} from 'react-router-dom';
+import './styles/style.scss';
 
 function App() {
   return (
