@@ -1,0 +1,21 @@
+.nav > ul {
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+        width: 100%;
+        padding: 15px;
+        list-style: none;
+    }
+
+    li > a {
+        font-family:'Times New Roman', Times, serif;
+        text-shadow: 0.1em 0.05em black;
+        font-size: 20px;
+        text-decoration: none;
+        color: $color-header-text;
+    }
+    
+}
