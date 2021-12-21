@@ -22,7 +22,7 @@ const Listapokemonbounce = () => {
         id: resp.data.id
       }]
       setPokemons(myPokemon);
-  }
+    }
     getPokemons()
   }, [debouncedText]);
  
@@ -30,7 +30,11 @@ const Listapokemonbounce = () => {
     <div className='general'>
       <form className='form'>
         <label htmlFor="pokemon">INTRODUCE UN POKEMON Y TE PINTARE CADA BÚSQUEDA:</label><br />
-        <input type="text" id="pokemon" name="pokemon" onChange={(e) => setPokeName(e.target.value)}/><br />
+        <input type="text" id="pokemon" name="pokemon" onChange={(e) =>{
+          if(e.target.value != null) {
+            setPokeName(e.target.value)
+          }
+        }}/><br />
       </form>
       {paintPokemons()}
     </div>
