@@ -21,17 +21,21 @@ const Listapokemon = () => {
 
   useEffect(() => {
     const getPokemons = async () => {
-      const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
-      const myPokemon =[...pokemons,{
-        name: resp.data.name,
-        picture: resp.data.sprites.front_default,
-        id: resp.data.id
-      }]
-      setPokemons(myPokemon);
-  }
+      if(pokemons.some(pokemon => pokemon.name === pokeName)){
+        alert("Pokemon existente");
+      } else {
+        const resp = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
+        const myPokemon =[...pokemons,{
+          name: resp.data.name,
+          picture: resp.data.sprites.front_default,
+          id: resp.data.id
+        }]
+        setPokemons(myPokemon);
+      }
+    }
     getPokemons()
   }, [pokeName]);
-  console.log(pokemons)
+  // console.log(pokemons)
   
 
 
